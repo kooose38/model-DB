@@ -87,6 +87,7 @@ def select_model_by_name(
 
 def add_model(
     db: Session,
+    model_id: str,
     project_id: str,
     model_name: str,
     description: Optional[str] = None,
@@ -100,7 +101,7 @@ def add_model(
     for model in models_in_project:
         if model.model_name == model_name:
             return model
-    model_id = str(uuid.uuid4())[:6]
+#     model_id = str(uuid.uuid4())[:6]
     data = models.Model(
         model_id=model_id,
         project_id=project_id,
