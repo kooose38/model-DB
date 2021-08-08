@@ -22,6 +22,7 @@ class Project(ProjectBase):
 
 
 class ModelBase(BaseModel):
+    model_id: str
     project_id: str
     model_name: str
     description: Optional[str]
