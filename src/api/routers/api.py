@@ -102,6 +102,7 @@ def add_model(
 ):
     return cruds.add_model(
         db=db,
+        model_id=model.model_id,
         project_id=model.project_id,
         model_name=model.model_name,
         description=model.description,
